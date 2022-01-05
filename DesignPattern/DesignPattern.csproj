@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{CC333B41-7BB7-4DA9-835C-CAE69D4A111A}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>DesignPattern</RootNamespace>
+        <AssemblyName>DesignPattern</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="FunctionExtension.cs" />
+        <Compile Include="patterns\AbstractFactory\AbstractFactory.cs" />
+        <Compile Include="patterns\AdapterPattern\Adaptee.cs" />
+        <Compile Include="patterns\Command\RemoteControl.cs" />
+        <Compile Include="patterns\DecorationPattern\component\Beverage.cs" />
+        <Compile Include="patterns\DecorationPattern\component\Espresso.cs" />
+        <Compile Include="patterns\DecorationPattern\component\HouseBlend.cs" />
+        <Compile Include="patterns\DecorationPattern\DecoratorPatternTest.cs" />
+        <Compile Include="patterns\DecorationPattern\decorator\CondimentDecorator.cs" />
+        <Compile Include="patterns\DecorationPattern\decorator\Milk.cs" />
+        <Compile Include="patterns\DecorationPattern\decorator\Mocha.cs" />
+        <Compile Include="patterns\FactoryPattern\factory\ChicagoStore.cs" />
+        <Compile Include="patterns\FactoryPattern\factory\NyPizzaStore.cs" />
+        <Compile Include="patterns\FactoryPattern\factory\PizzaStore.cs" />
+        <Compile Include="patterns\FactoryPattern\goods\CheesePizza.cs" />
+        <Compile Include="patterns\FactoryPattern\goods\ClamPizza.cs" />
+        <Compile Include="patterns\FactoryPattern\goods\Pizza.cs" />
+        <Compile Include="patterns\FactoryPattern\goods\VeggiePizza.cs" />
+        <Compile Include="patterns\FactoryPattern\SimpleFactoryPatternTest.cs" />
+        <Compile Include="patterns\ObserverPattern\entity\WeatherData.cs" />
+        <Compile Include="patterns\ObserverPattern\ObserverPatternTest.cs" />
+        <Compile Include="patterns\ObserverPattern\observers\CurrentConditionDisplay.cs" />
+        <Compile Include="patterns\ObserverPattern\observers\ForecastDisplay.cs" />
+        <Compile Include="patterns\ObserverPattern\observers\IDisplayElement.cs" />
+        <Compile Include="patterns\ObserverPattern\observers\IObserver.cs" />
+        <Compile Include="patterns\ObserverPattern\observers\StatisticsDisplay.cs" />
+        <Compile Include="patterns\ObserverPattern\observers\ThirdPartyDisplay.cs" />
+        <Compile Include="patterns\ObserverPattern\subjects\ISubject.cs" />
+        <Compile Include="patterns\ObserverPattern\subjects\WeatherChangedEventArgs.cs" />
+        <Compile Include="patterns\ObserverPattern\subjects\WeatherSubject.cs" />
+        <Compile Include="patterns\Singleton\Singleton.cs" />
+        <Compile Include="patterns\StrategyPattern\eneity\Duck.cs" />
+        <Compile Include="patterns\StrategyPattern\eneity\MallardDuck.cs" />
+        <Compile Include="patterns\StrategyPattern\strategies\FlyWithWings.cs" />
+        <Compile Include="patterns\StrategyPattern\strategies\IFlyBehavior.cs" />
+        <Compile Include="patterns\StrategyPattern\strategies\Strategies.cs" />
+        <Compile Include="patterns\StrategyPattern\StrategyPatternTest.cs" />
+        <Compile Include="Program.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="patterns\CommandPattern" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
